@@ -1,0 +1,27 @@
+
+@import
+url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Poppins:wght@500&family=Source+Sans+Pro&display=swap');
+
+$main-font: "Source Sans Pro", sans-serif;
+$logo-font: "Baloo 2", sans-serif;
+$primary-color: #FFF;
+$navicon: #242635;
+
+i {
+    color: $navicon;
+    font-size: 1.5rem;
+}
+
+h1, h2, h3 {
+    color: $primary-color;
+}
+
+h1 {
+    font-family: $logo-font;
+    font-size: 2rem;
+}
+
+h2, h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.25rem;
+}
