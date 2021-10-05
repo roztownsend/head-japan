@@ -1,35 +1,57 @@
 
 @import 'fonts';
 
-// $grid-color: rgba(92,124,250,2);
+$grid-color: rgba(92,124,250,0.2);
 
 body {
-    margin: auto;
-    max-width: 95%;
-    max-height: 100vh;
+    height: 100vh;
     display: flex;
-    align-items: space-between;
-    font-size: .75rem;
-    font-family: $main-font;
     background-color: #000;
     } 
 
 .gridlines {
-    background-image: repeating-linear-gradient(
-        90deg, 
-        rgba(255,0,0,0), 
-        rgba(255,0,0,0) 10%, 
-        rgba(92,124,250, 0.2) 1px, 
-        rgba(92,124,250, 0.2) 10.1%),
-        repeating-linear-gradient(
-        180deg,
-        rgba(255,0,0,0), 
-        rgba(255,0,0,0) 20%, 
-        rgba(92,124,250, 0.2) 1px, 
-        rgba(92,124,250, 0.2) 20.1%
-        );
-    width:100%;
+    position: absolute;
+    z-index: 99999;
+    width:100vw;
     height:100vh;
-    
-}
-    
+    background-image: 
+        repeating-linear-gradient(
+            to right, 
+            transparent, 
+            transparent 9.9%, 
+            $grid-color 10%, 
+            $grid-color 10.1%),
+        repeating-linear-gradient(
+            to bottom, 
+            transparent, 
+            transparent 9.9%, 
+            $grid-color 10%, 
+            $grid-color 10.1%);
+            }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 5%;
+    padding-right: 5%;
+    }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    height: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    > div {
+        text-align: center;
+        padding-top: 10%;
+        }
+
+    > div:last-of-type {
+        align-self: flex-end;
+        }
+    }
