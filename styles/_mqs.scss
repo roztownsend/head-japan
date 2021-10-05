@@ -1,0 +1,33 @@
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    h2 {font-size: 4.5rem;}
+    p {font-size: 1.375 rem;}
+}
+
+@media screen and (min-width: 769px) {
+    h2 {font-size: 5.25rem;}
+    p {font-size: 1.375 rem;}
+}
+
+@media screen and (max-width: 320px) {
+    .theme_img {
+        background-image: url('/images/fuji-sm.png');
+   
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .theme_img {
+        background-image: url('/images/fuji-med.png');
+
+    }
+}
+
+ @media screen and (min-width: 769px) {
+    .theme_img {
+        background-image: url('/images/fuji-lg.png');
+        width: 864px;
+        height: 328px;
+    }
+}
