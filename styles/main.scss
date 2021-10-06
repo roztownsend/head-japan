@@ -10,6 +10,18 @@ body {
     background-color: #000;
     } 
 
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+a:hover {
+    color: #CCC;
+    transition: color 1s;
+}
+
+// I don't know if I am completely off-base here with how to do this. I am at an utter loss with how to get the gradient lines to appear over the rest of the document body.
+
 .gridlines {
     position: absolute;
     z-index: 99999;
@@ -36,7 +48,33 @@ header {
     align-items: baseline;
     padding-left: 5%;
     padding-right: 5%;
+    flex-wrap: nowrap;
+    max-width: 85vw;
     }
+
+// I cannot figure out how to get the last div element (the icon) to align to the rest of the row.
+
+.navwrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    > div {
+        padding-right: 5%;
+        flex-shrink: 0;
+    }
+}
+
+ul {
+    list-style-type: none;
+    font-size: 1rem;
+    display: flex;
+}
+
+li {
+    padding-left: 15%;
+}
+
 
 main {
     display: flex;
